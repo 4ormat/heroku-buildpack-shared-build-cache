@@ -31,7 +31,7 @@ cache_get_url=$(curl -s https://api.heroku.com/apps/$SHARED_BUILD_CACHE_APP_NAME
   -H "Authorization: Bearer $HEROKU_API_KEY" \
   | jq -r .cache_get_url)
 
-echo "Restoring shared build cache from app [$SHARED_BUILD_CACHE_APP_NAME]..."
+echo "Restoring shared build cache from app [$SHARED_BUILD_CACHE_APP_NAME] $cache_get_url..."
 
 start=`date +%s`
 
